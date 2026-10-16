@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Ebedi Kırmızı Işık Simülatörü
+# Ebedi Kırmızı Işık Simülatörü (Yeşil denemesi)
 # Bu kod gerçekten çalışır. Yeşil ışık hiç yanmaz.
 
 import time
@@ -30,6 +30,10 @@ def ebedi_kirmizi():
         sikayet = random.choice(SIKAYETLER)
         print(f"[{sayac}] KIRMIZI: {sikayet}")
         time.sleep(random.uniform(1.5, 4.0))
+        
+        # Yeşil ışık denemesi (başarısız)
+        if sayac % 50 == 0:
+            print("   → YEŞİL denendi... Olmadı. Yine kırmızı.")
         
         if sayac % 10 == 0:
             print("   → Yeşil ışık kontrol edildi: Hala yok. Sürpriz yok.")
